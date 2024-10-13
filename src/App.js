@@ -1,11 +1,13 @@
 import React from 'react';
 import './Login_page.css';
+import './index.css';
 import diceImage from './dice.jpg';
 import facebookLogo from './facebook_logo.png';
 import googleLogo from './google_logo.png';
 import instagramLogo from './instagram_logo.png';
 import twitterLogo from './twitter_logo.png';
 import zannana from './zannana_logo.png';
+
 
 const App = () => {
   return (

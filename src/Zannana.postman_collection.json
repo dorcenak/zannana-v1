@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "3010e44e-935a-4775-875b-c5162dd1aaac",
+		"name": "Zannana",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26793552"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/zannana/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/zannana/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"zannana",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 05 Sep 2024 12:46:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "45b276b0-2295-4e13-a072-284345c44670"
+						},
+						{
+							"key": "x-amzn-Remapped-content-length",
+							"value": "2"
+						},
+						{
+							"key": "x-amzn-Remapped-authorization",
+							"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlZDNiYzMzLWU4ZDAtNGM4Yy1hNDY1LTg0NTUwZGRjOTllYiIsImlhdCI6MTcyNTU0MDM2MiwiZXhwIjoxNzI1NTQzOTYyfQ.AeC6CgUiNT4myRJOMGyhbdde-GTd6y2d0hBJxjhF9gkDFg40b4lnBgkBhAveInNErfun2A2KbfmKDsFtR09tAonhysgZVNJIxxdaCD_zl9w7nGsRO5vO0UQUFocxJ483J0QAMbr5C3-jnU8Ee7wKsHO6XBQllUcNbYV7RGONKfuB359kHpIOQf29k6lI9Ingvl_uZ8l1nB0bAdbes2A7t7LGZ0rOiV0P5zAWWyX197wMgJqBXW7vxpsaP1AokDezR1nWuEUI38z4V_LQFIgnX8Ft_KfUVia_J2y6f0U_DSMS8LNnQv1ojN9JRy8OXjYuHMYWu61CX7-1kTVgtA7r1ktucxkoShH4GMG57oRoV7qhU_R4TVwgv4viLawZn1_XHLwCIhBKIc5yRiebxEfokbfAgQPHeSZVhl79kIpJX3HSYX36tH944-gU5NgosQjChOcO4_acQA6o3Vwmx9-IkOL62Mrl1ji91u_-B_4kx1CqjXvf7WgeFYop6sY5xXyOVkRP_1htyuUaoXDumzv8VosKvDtZCn0a4UwcphLWNhGFJ2Mu2w9m0CgaPW2Yxabrd1wjXaYBCvS6GzHUhStPRtBe81aZD9YL6GqZsdGKzR4B7KlryB6ufFcSq5-2gkAnE7hyxLnWeUi1CVuiutvwXfBMbPAG3tgJ1fTZffE6pVY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "docxCGraoAMEB7g="
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2-nOO9QiTIwXgNtWtBJezz8kv3SLc\""
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-66d9a806-0ade2988033bfc151b3c5a5e;Parent=6efd17dcee543074;Sampled=0;lineage=1:d631d70b:0"
+						},
+						{
+							"key": "refreshtoken",
+							"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlZDNiYzMzLWU4ZDAtNGM4Yy1hNDY1LTg0NTUwZGRjOTllYiIsImlhdCI6MTcyNTU0MDM2MiwiZXhwIjoxNzI2MTQ1MTYyfQ.Jgtnn8lgqpodkukF2nNvUvNBcuiVEvqAnQKZWiHxJ_Y4vU9e7H_UXoFmBxCxhow9dv3camcLSTlQLxP_qZ4XgeZc1nCf3CglOKkGLa1Pp9m5aDvt7_u9dDgCbtkj4lsTKhlUpyQ4q9fVSZSz7hLuftkIzcQsmNbSikwnEfJQnD1zEzsGNFZNcRrMvd6eMKTY7sxlzCEQhrB6uH9QFSok8-C9ByeQone1HBNcQWMTvo3LpyxzhR0aQqiLQMCefLjKg-IkxqNPe7-a1yvedOHIV3OM75HCDRU8CviJrhd7OEZRollr27uhnxlTgB_UkFKdhDTZltMqVhxrJgBE7qlSObxq8xtVDbZfWmH3HT8Twpn7niGK5h_ExfXczN05L_XpPmb3TE2oMqnghg3y2iBi5eCuj3SPUUPOWdqttn9_IyN3wVUHug1kpJQM7qwiWTrnBXICdM_1N5rVsuJiYU7dMqpFDC6rG_GSc3E2ViVePwIaqWJr1P4OHif4vCGQwbUKxxvOHxOhTv_yMSaSloSIjI-DV0E1KT0Aw3Zwv7e6WOLJsK5CDGhfv1PVxGfbht283ue_k2qlHzFGQqSxhwV-LsEeEG1_we-_RCnzizRxd6qZWU_NVgEYBvnl40EUlKlvOzM7CPQYDMJlGa7tvb4jwlnJLNLPYwkQqW-Df9v6dqI"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				}
+			]
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"abc\",\n    \"password\": \"Acvd@23..\",\n    \"first_name\": \"Test\",\n    \"birth_year\": 1925\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/zannana/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlZDNiYzMzLWU4ZDAtNGM4Yy1hNDY1LTg0NTUwZGRjOTllYiIsImlhdCI6MTcyMTY1MjQyMCwiZXhwIjoxNzIyMjU3MjIwfQ.AqOJRgLXA5-Q4q7NRhcIqi3Rpv8SMq9FgiVyrCL-0SXMIzdoRWrXOZFH3LdiV3mbOxQX5oIeBic1Rw2bQ1w4dBPUeK4lYUkW4zHjOF88wPPQ8fry5nF6QNqNCg6fOuf9OHYhydMn0munJjtF0qfCXl3nq181DfSkXUkBFPwS4aJhfZPmGa1ls3o_n3u6SUXw9HJjr9dVYYrKgL2-Pb5P3GtmnCzrKd_o1NjHPGhg78GlemQQuY9blY0jb_ElKYbbUq0Kr_GqSZ2laal6E4DytSnYHEGSQB578499VDfj4IZ2EBQeLOhOJYVktGZj8RouY-bHj2mw2m9O-nharO_T_JXzBdFSSSJRd4KJDmaEK75HC1mTDQLCXi1xnyx09o3gYbHpbiwCsV8mGuLFu87alS4bVjhan6zJMQ430tA7qlYbFA9IMqQYoPLVD77pzGMtW6XQlrunK0iRqigXqYKbWC4fX5PxDvqUd8CUl7irqg0qrjgA5oRIUPaDaVvcw0MDvAtdRm6_99RZyiqphVF3xWvGkjGAZgcNcJKIB1cKTdzLuYTsegEXsb3lHFXNQPX2JcDhJIGUxSgV6yEgAdUs-IAgIq9wmNISli9jF9l209Zrab7k-WGsTOJfAKbinJUJVW27qkHVkgUEkCV5z9jpbDLb8gYzPf5eDpnluytJWJs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/zannana/refresh-token",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "ced3bc33-e8d0-4c8c-a465-84550ddc99eb",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/zannana/get-user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetLocation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "ced3bc33-e8d0-4c8c-a465-84550ddc99eb",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": 12.4,\n    \"lng\": 13.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/zannana/set-location",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"set-location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetPreference",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "ced3bc33-e8d0-4c8c-a465-84550ddc99eb",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gameList\": [\"Cricket\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/zannana/set-preference",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"zannana",
+						"set-preference"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlZDNiYzMzLWU4ZDAtNGM4Yy1hNDY1LTg0NTUwZGRjOTllYiIsImlhdCI6MTcyNTU0MDM2MiwiZXhwIjoxNzI1NTQzOTYyfQ.AeC6CgUiNT4myRJOMGyhbdde-GTd6y2d0hBJxjhF9gkDFg40b4lnBgkBhAveInNErfun2A2KbfmKDsFtR09tAonhysgZVNJIxxdaCD_zl9w7nGsRO5vO0UQUFocxJ483J0QAMbr5C3-jnU8Ee7wKsHO6XBQllUcNbYV7RGONKfuB359kHpIOQf29k6lI9Ingvl_uZ8l1nB0bAdbes2A7t7LGZ0rOiV0P5zAWWyX197wMgJqBXW7vxpsaP1AokDezR1nWuEUI38z4V_LQFIgnX8Ft_KfUVia_J2y6f0U_DSMS8LNnQv1ojN9JRy8OXjYuHMYWu61CX7-1kTVgtA7r1ktucxkoShH4GMG57oRoV7qhU_R4TVwgv4viLawZn1_XHLwCIhBKIc5yRiebxEfokbfAgQPHeSZVhl79kIpJX3HSYX36tH944-gU5NgosQjChOcO4_acQA6o3Vwmx9-IkOL62Mrl1ji91u_-B_4kx1CqjXvf7WgeFYop6sY5xXyOVkRP_1htyuUaoXDumzv8VosKvDtZCn0a4UwcphLWNhGFJ2Mu2w9m0CgaPW2Yxabrd1wjXaYBCvS6GzHUhStPRtBe81aZD9YL6GqZsdGKzR4B7KlryB6ufFcSq5-2gkAnE7hyxLnWeUi1CVuiutvwXfBMbPAG3tgJ1fTZffE6pVY",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://fcuvebdt12.execute-api.us-east-1.amazonaws.com/dev",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "Acvd@23..",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "abc@d.efg",
+			"type": "string"
+		}
+	]
+}
